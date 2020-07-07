@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html>
+    <!-- Elément head : instructions envoyées au navigateur -->
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Découvrir le HTML</title>
+    
+        <link href="assets/css/styles.css" rel="stylesheet">
+        <!-- load icomoon style -->
+        <link href="/assets/css/style.css" rel="stylesheet">
+
+    </head>
+
+    <!--
+        Element body : contenu visible dans la fenêtre du navigateur
+        Le contenu sera traité et affiché par le navigateur
+    -->
+    <body>
+        <header>
+            <h1>Découvrir le HTML</h1>
+            <p>
+                L'histoire du 
+                <!--
+                    abbr avec l'attribut title pour donner la signification
+                    de l'abbréviation définie (ici HTML <=> Hyper Text Markup Language)
+                -->
+                <abbr title="Hyper Text Markup Language" class="dropdown">HTML</abbr>
+                à travers les âges
+            </p>
+            
+            <nav class="bg-dark shadowed"><!-- Element qui regroupe des balises de navigation -->
+                <ul><!-- Conteneur de liste-->
+                    <!-- Lien interne vers une section-->
+                    <li>
+                        <a href="index.html" class="btn bg-dark shadowed current" title="HTML la référence">
+                            <span class="icon-home"> Accueil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section-html" class="btn bg-dark shadowed" title="HTML la référence">
+                            <span class="icon-html-five"> HTML</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#section-css" class="btn bg-dark shadowed" title="HTML la référence">
+                            <span class="icon-css3"> CSS</span>
+                        </a>
+                    </li>
+                    <!-- Lien de type téléphone /!\ never this way -->
+                    <li>
+                        <a class="btn bg-dark shadowed" href="tel:0522336699" title="Click to call">
+                            <span class="icon-phone"> Appelez-nous</span>
+                        </a>
+                    </li>
+
+                    <!-- Lien de type mail /!\ never this way -->
+                    <li>
+                        <a  class="btn bg-dark shadowed" href="mailto:toto@tartempion.com?subject=Contact us" title="Send an email">
+                        <span class="icon-envelop"> Mail</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="section-html">
+                <header>
+                    <h2>Le langage HTML</h2>
+                    <p>
+                        Le <strong>langage HTML</strong> sert à définir le sens des contenus d'une page.
+                        <em>Il n'est en aucun cas responsable de l'enrichissement</em> de ces contenus.
+                    </p>
+                </header>
+
+                <article>
+                    <header>
+                        <h3>Deux familles de balises HTML</h3>
+                    </header>
+                    <p>
+                        Les balises bloc définissent un rectangle occupant
+                        la totalité de la largeur disponible dans le navigateur.
+                    </p>
+                    <footer>
+                        <cite title="w3c.org">
+                            <a href="https://www.w3.org" title="W3C" target="_new">
+                                Bloc tags
+                            </a>
+                        </cite> </br>
+                        <a href="./section-html.html" class="btn bg-dark shadowed" title="HTML la référence">
+                            En savoir plus
+                        </a>
+                    </footer>
+                </article>
+            </section>
+
+            <section id="section-css">
+                <header>
+                    <h2>Le langage CSS</h2>
+                    <p>
+                        Le langage CSS est responsable de la forme des contenus.
+                    </p>
+                </header>
+            </section>
+        </main>
+
+        <footer class="bg-dark ">
+            <p>Nos réseaux sociaux:</p>
+            <ul><!-- Conteneur de liste-->
+                <!-- Lien interne vers une section-->
+                <li>
+                    <a href="hhtps://www.linkedin.com" class="reseau bg-dark" title="Check this out !">
+                        <span class="icon-linkedin"> Linkedin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hhtps://www.twitter.com" class="reseau bg-dark" title="FOLLOW !">
+                        <span class="icon-twitter"> Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com" class=" reseau bg-dark" title="Suscribe">
+                        <span class="icon-facebook2"> Facebook</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- 
+                Spécification d'une adresse
+                L'utilisation du format vcard est recommandé
+                @see : http://microformats.org/wiki/vcard-fr
+            -->
+            <address>
+                
+            </address>
+        </footer>
+    </body>
+
+</html><!-- Fin du document HTML -->

@@ -1,0 +1,97 @@
+:root{
+    --title-color: rgb(200,89,10);
+    --main-color: rgb(0,0,0);
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --info: #17a2b4;
+    --dark: #343a40;
+    --light: #ffffff;
+}
+
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--main-color);
+}
+ul{
+    list-style-type: none;
+    color: var(--light);
+}
+nav{
+    color: var(--light);
+}
+/* nav ul li a:hover{
+    background-color: var(--light);
+    color: var(--dark);
+    transition: 0.6s 0.2s ease-in;
+    transform: rotate(360deg);
+} */
+
+nav ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+h1,h2{
+    color: var(--title-color);
+}
+
+abbr{
+    font-weight: bold;
+    text-decoration: none;
+}
+.dropdown{
+    color: inherit;
+}
+.btn{
+    display: inline-block;
+    border: solid 1px var(--dark);
+    width: 8em;
+    /* padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em; */
+    padding: 1em 0.5em 1em 0.5em;
+    text-decoration: none;
+}
+.bg-light{
+    background: var(--light);
+    color: var(--dark);
+}
+.bg-dark{
+    background: var(--dark);
+    color: var(--light);
+}
+.shadowed{
+    box-shadow: var(--secondary) 1px 3px;
+}
+section{
+    height: 100vh;
+}
+#section-html{
+    background-color: var(--info);
+}
+
+#section-css{
+    background-color: var(--warning);
+}
+
+.current{
+    background-color: var(--warning);
+}
+
+.btn:hover{
+    background-color: var(--light);
+    color: var(--dark);
+    transition: 0.6s 0.2s ease-in;
+    transform: rotate(360deg);
+}
+.reseau{
+    text-decoration: none;
+}
+footer{
+    height: 20vh;
+    display: flex;
+}
