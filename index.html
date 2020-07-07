@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,user-scalable=no"
         <title>Découvrir le HTML</title>
     
-        <link href="assets/css/styles.css" rel="stylesheet">
+        <link href="/assets/css/styles.css" rel="stylesheet">
+        <link href="/assets/css/layout.css" rel="stylesheet"
         <!-- load icomoon style -->
         <link href="/assets/css/style.css" rel="stylesheet">
 
@@ -31,6 +32,9 @@
             </p>
             
             <nav class="bg-dark shadowed"><!-- Element qui regroupe des balises de navigation -->
+                <button id="burger-btn">
+                    <span class="icon-menu"></span>
+                </button>
                 <ul><!-- Conteneur de liste-->
                     <!-- Lien interne vers une section-->
                     <li>
@@ -65,8 +69,8 @@
             </nav>
         </header>
         
-        <main>
-            <section id="section-html">
+        <main class="row">
+            <section id="section-html" class="col-6">
                 <header>
                     <h2>Le langage HTML</h2>
                     <p>
@@ -84,19 +88,19 @@
                         la totalité de la largeur disponible dans le navigateur.
                     </p>
                     <footer>
+                        <a href="./section-html.html" class="btn bg-dark shadowed seemore" title="HTML la référence">
+                            En savoir plus
+                        </a>
                         <cite title="w3c.org">
                             <a href="https://www.w3.org" title="W3C" target="_new">
                                 Bloc tags
                             </a>
-                        </cite> </br>
-                        <a href="./section-html.html" class="btn bg-dark shadowed" title="HTML la référence">
-                            En savoir plus
-                        </a>
+                        </cite>
                     </footer>
                 </article>
             </section>
 
-            <section id="section-css">
+            <section id="section-css" class="col-6">
                 <header>
                     <h2>Le langage CSS</h2>
                     <p>
