@@ -4,11 +4,11 @@
     <!-- Elément head : instructions envoyées au navigateur -->
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,user-scalable=no"
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,user-scalable=no">
         <title>Découvrir le HTML</title>
     
         <link href="/assets/css/styles.css" rel="stylesheet">
-        <link href="/assets/css/layout.css" rel="stylesheet"
+        <link href="/assets/css/layout.css" rel="stylesheet">
         <!-- load icomoon style -->
         <link href="/assets/css/style.css" rel="stylesheet">
 
@@ -20,17 +20,22 @@
     -->
     <body>
         <header>
-            <h1>Découvrir le HTML</h1>
-            <p>
-                L'histoire du 
-                <!--
-                    abbr avec l'attribut title pour donner la signification
-                    de l'abbréviation définie (ici HTML <=> Hyper Text Markup Language)
-                -->
-                <abbr title="Hyper Text Markup Language" class="dropdown">HTML</abbr>
-                à travers les âges
-            </p>
-            
+            <div class="row">
+                <div class="col-xl-6 col-12" >
+                    <h1 >Découvrir le HTML</h1>
+                </div>
+                <div class="col-xl-6 col-12">
+                    <p>
+                        L'histoire du 
+                        <!--
+                            abbr avec l'attribut title pour donner la signification
+                            de l'abbréviation définie (ici HTML <=> Hyper Text Markup Language)
+                        -->
+                        <abbr title="Hyper Text Markup Language" class="dropdown">HTML</abbr>
+                        à travers les âges
+                    </p>
+                </div>
+            </div>
             <nav class="bg-dark shadowed"><!-- Element qui regroupe des balises de navigation -->
                 <button id="burger-btn">
                     <span class="icon-menu"></span>
