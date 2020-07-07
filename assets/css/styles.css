@@ -20,8 +20,21 @@ ul{
     list-style-type: none;
     color: var(--light);
 }
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media screen and (max-width:576px) {
+    header nav ul{
+        flex-direction: column;
+
+    }
+}
+
 nav{
     color: var(--light);
+
 }
 /* nav ul li a:hover{
     background-color: var(--light);
