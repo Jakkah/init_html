@@ -84,8 +84,9 @@
                     <li>
                         <a
                             class="btn bg-dark" 
-                            href="mailto:toto@tartempion.com?subject=Contact us" 
+                            href="#" 
                             title="Send an email"
+                            onclick="openModal()"
                         >
                             Mail
                         </a>
@@ -163,7 +164,7 @@
                 </nav>
             </footer>
         </div>
-        <!-- <template id="form-template"> -->
+        <template id="form-template">
             <div class="outer-modal">
                 <div class="inner-modal">
                     <h2>Contactez le service client</h2>
@@ -178,12 +179,14 @@
                             <textarea name="object-ctrl" id="object-ctrl" placeholder="Dites-nous tout !"></textarea>
                         </div>
                         <div>
-                            <button id="send-btn">Envoyer</button> 
+                            <button id="send-btn" onclick="sendAndClose()">Envoyer</button>
+                            <button id="annuler-btn" type="button" onclick="closeModal()">Annuler</button> 
                         </div>
                     </form>
                 </div>
             </div>
-        <!-- </template> -->
+        </template>
+        <script src="./assets/js/modal.js"></script>
     </body>
 
 </html><!-- Fin du document HTML -->
