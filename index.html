@@ -4,13 +4,20 @@
     <!-- Elément head : instructions envoyées au navigateur -->
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,user-scalable=no">
+
+        <!-- Définition des règles de media -->
+        <meta 
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"
+        >
+
         <title>Découvrir le HTML</title>
-    
-        <link href="/assets/css/styles.css" rel="stylesheet">
-        <link href="/assets/css/layout.css" rel="stylesheet">
-        <!-- load icomoon style -->
-        <link href="/assets/css/style.css" rel="stylesheet">
+
+        <link href="./assets/css/styles.css" rel="stylesheet">
+        <link href="./assets/css/layout.css" rel="stylesheet">
+
+        <!-- Load icomoon styles -->
+        <link href="./assets/css/style.css" rel="stylesheet">
 
     </head>
 
@@ -19,62 +26,76 @@
         Le contenu sera traité et affiché par le navigateur
     -->
     <body>
-        <header>
-            <div class="row">
-                <div class="col-xl-6 col-12" >
-                    <h1 >Découvrir le HTML</h1>
-                </div>
-                <div class="col-xl-6 col-12">
-                    <p>
-                        L'histoire du 
-                        <!--
-                            abbr avec l'attribut title pour donner la signification
-                            de l'abbréviation définie (ici HTML <=> Hyper Text Markup Language)
-                        -->
-                        <abbr title="Hyper Text Markup Language" class="dropdown">HTML</abbr>
-                        à travers les âges
-                    </p>
-                </div>
-            </div>
-            <nav class="bg-dark shadowed"><!-- Element qui regroupe des balises de navigation -->
+        <header class="row">
+  
+            <h1 class="col-12 col-xl-8">Découvrir le HTML</h1>
+
+            <p class="col-12 col-xl-4">
+                L'histoire du 
+                <!--
+                    abbr avec l'attribut title pour donner la signification
+                    de l'abbréviation définie (ici HTML <=> Hyper Text Markup Language)
+                -->
+                <abbr title="Hyper Text Markup Language" class="dropdown">HTML</abbr>
+                à travers les âges
+            </p>
+
+            <!-- Element qui regroupe des balises de navigation -->
+            <nav class="bg-dark col-12 col-xl-12">
+
+                <!-- 
+                    Burger menu button :
+                        Displayed only when device width <= 576px
+                -->
                 <button id="burger-btn">
                     <span class="icon-menu"></span>
                 </button>
-                <ul><!-- Conteneur de liste-->
+
+                <!--
+                    Menu do not be displayed if device width <= 576px
+                -->
+                <ul class="flex-container"><!-- Conteneur de liste-->
                     <!-- Lien interne vers une section-->
-                    <li>
+                    <li>    
                         <a href="index.html" class="btn bg-dark shadowed current" title="HTML la référence">
                             <span class="icon-home"> Accueil</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#section-html" class="btn bg-dark shadowed" title="HTML la référence">
-                            <span class="icon-html-five"> HTML</span>
+                        <a class="btn bg-dark" href="#" title="HTML la référence">
+                            <span class="icon-html-five"></span>HTML
                         </a>
                     </li>
                     <li>
-                        <a href="#section-css" class="btn bg-dark shadowed" title="HTML la référence">
-                            <span class="icon-css3"> CSS</span>
+                        <a class="btn bg-dark" href="#" title="CSS la référence">
+                            <span class="icon-css3"></span>CSS
                         </a>
                     </li>
+                    <!-- Lien externe vers un autre site -->
+
+
                     <!-- Lien de type téléphone /!\ never this way -->
                     <li>
-                        <a class="btn bg-dark shadowed" href="tel:0522336699" title="Click to call">
-                            <span class="icon-phone"> Appelez-nous</span>
+                        <a class="btn bg-dark" href="tel:0522336699" title="Click to call">
+                            Appelez nous
                         </a>
                     </li>
 
                     <!-- Lien de type mail /!\ never this way -->
                     <li>
-                        <a  class="btn bg-dark shadowed" href="mailto:toto@tartempion.com?subject=Contact us" title="Send an email">
-                        <span class="icon-envelop"> Mail</span>
+                        <a
+                            class="btn bg-dark" 
+                            href="mailto:toto@tartempion.com?subject=Contact us" 
+                            title="Send an email"
+                        >
+                            Mail
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
         
-        <main class="row">
+        <main class="row"><!-- Contenu principal d'une page / unique dans un document -->
             <section id="section-html" class="col-xl-6 col-12">
                 <header>
                     <h2>Le langage HTML</h2>
@@ -89,13 +110,15 @@
                         <h3>Deux familles de balises HTML</h3>
                     </header>
                     <p>
-                        Les balises bloc définissent un rectangle occupant
+                        Les <span>balises bloc</span> définissent un rectangle occupant
                         la totalité de la largeur disponible dans le navigateur.
                     </p>
+                    
+                    <a class="btn bg-dark" href="./section-html.html" title="HTML">
+                        En savoir plus...
+                    </a>
+
                     <footer>
-                        <a href="./section-html.html" class="btn bg-dark shadowed seemore" title="HTML la référence">
-                            En savoir plus
-                        </a> <br>
                         <cite title="w3c.org">
                             <a href="https://www.w3.org" title="W3C" target="_new">
                                 Bloc tags
@@ -115,35 +138,48 @@
             </section>
         </main>
 
-        <footer class="bg-dark ">
-            <p>Nos réseaux sociaux:</p>
-            <ul><!-- Conteneur de liste-->
-                <!-- Lien interne vers une section-->
-                <li>
-                    <a href="hhtps://www.linkedin.com" class="reseau bg-dark" title="Check this out !">
-                        <span class="icon-linkedin"> Linkedin</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="hhtps://www.twitter.com" class="reseau bg-dark" title="FOLLOW !">
-                        <span class="icon-twitter"> Twitter</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" class=" reseau bg-dark" title="Suscribe">
-                        <span class="icon-facebook2"> Facebook</span>
-                    </a>
-                </li>
-            </ul>
-            <!-- 
-                Spécification d'une adresse
-                L'utilisation du format vcard est recommandé
-                @see : http://microformats.org/wiki/vcard-fr
-            -->
-            <address>
-                
-            </address>
-        </footer>
+        <div class="bg-dark">
+            <footer>
+                <nav>
+                    <h3>
+                        Nos réseaux sociaux
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="https://facebook.com" target="_new" title="Follow Us">
+                                <span class="icon-facebook2"></span> Facebook
+                            </a>                                
+                        </li>
+                        <li>
+                            <a href="https://twitter.com" target="_new" title="Follow Us">
+                                <span class="icon-twitter"></span> Twitter
+                            </a>                                
+                        </li>
+                        <li>
+                            <a href="https://linked.com" target="_new" title="Follow Us">
+                                <span class="icon-linkedin"></span> Linkedin
+                            </a>                                
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+        <!-- <template id="form-template"> -->
+            <form>
+                <div>
+                    <input type="text" name="name-ctrl" id="name-ctrl" placeholder="Votre nom...">
+                </div>
+                <div>
+                    <input type="email" name="email-ctrl" id="email-ctrl" placeholder="Votre email...(obligatoire)" required>
+                </div>
+                <div>
+                    <textarea name="object-ctrl" id="object-ctrl" placeholder="Dites-nous tout !"></textarea>
+                </div>
+                <div>
+                    <button id="send-btn">Envoyer</button> 
+                </div>
+            </form>
+        <!-- </template> -->
     </body>
 
 </html><!-- Fin du document HTML -->
