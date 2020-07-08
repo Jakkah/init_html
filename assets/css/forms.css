@@ -5,14 +5,16 @@
 input{
     border-radius:.3em;
     padding: .5em;
-    border: solid 1px rgb(128, 128, 128);
+    border: solid 1px var(--secondary);
 }
 
 #send-btn{
-    background-color: #28a745;
-    color: #ffffff;
+    padding: 0.5em;
+    background-color: var(--success);
+    color: var(--light);
     border-radius:.3em;
     border: none;
+    transition: background-color 0.5s 0s ease-out;
 }
 #send-btn:hover{
     background-color: rgb(1, 83, 1);
