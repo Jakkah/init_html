@@ -126,3 +126,24 @@ footer{
 #section-html footer{
     display: block;
 }
+
+/* Modal css */
+
+.outer-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
+.inner-modal{
+    position: relative;
+    background-color: var(--light);
+    width: 450px;
+    height: 250px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}

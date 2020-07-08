@@ -164,22 +164,25 @@
             </footer>
         </div>
         <!-- <template id="form-template"> -->
-            <form>
-                <div>
-                    <input type="text" name="name-ctrl" id="name-ctrl" placeholder="Votre nom...">
+            <div class="outer-modal">
+                <div class="inner-modal">
+                    <h2>Contactez le service client</h2>
+                    <form>
+                        <div>
+                            <input type="text" name="name-ctrl" id="name-ctrl" placeholder="Votre nom...">
+                        </div>
+                        <div class="required">
+                            <input type="email" name="email-ctrl" id="email-ctrl" placeholder="Votre email..." required>
+                        </div>
+                        <div>
+                            <textarea name="object-ctrl" id="object-ctrl" placeholder="Dites-nous tout !"></textarea>
+                        </div>
+                        <div>
+                            <button id="send-btn">Envoyer</button> 
+                        </div>
+                    </form>
                 </div>
-                <div>
-                   <span class="required">
-                       <input type="email" name="email-ctrl" id="email-ctrl" placeholder="Votre email..." required>
-                   </span>
-                </div>
-                <div>
-                    <textarea name="object-ctrl" id="object-ctrl" placeholder="Dites-nous tout !"></textarea>
-                </div>
-                <div>
-                    <button id="send-btn">Envoyer</button> 
-                </div>
-            </form>
+            </div>
         <!-- </template> -->
     </body>
 
