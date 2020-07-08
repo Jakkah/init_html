@@ -15,9 +15,8 @@
 
         <link href="./assets/css/styles.css" rel="stylesheet">
         <link href="./assets/css/layout.css" rel="stylesheet">
-
-        <!-- Load icomoon styles -->
-        <link href="./assets/css/style.css" rel="stylesheet">
+        <link href="./assets/css/forms.css"  rel="stylesheet">
+        <link href="./assets/css/style.css"  rel="stylesheet">
 
     </head>
 
@@ -170,7 +169,9 @@
                     <input type="text" name="name-ctrl" id="name-ctrl" placeholder="Votre nom...">
                 </div>
                 <div>
-                    <input type="email" name="email-ctrl" id="email-ctrl" placeholder="Votre email...(obligatoire)" required>
+                   <span class="required">
+                       <input type="email" name="email-ctrl" id="email-ctrl" placeholder="Votre email..." required>
+                   </span>
                 </div>
                 <div>
                     <textarea name="object-ctrl" id="object-ctrl" placeholder="Dites-nous tout !"></textarea>
