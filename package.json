@@ -1,0 +1,29 @@
+{
+  "name": "init-html",
+  "version": "1.0.0",
+  "description": "Site web de présentation des technologies du web : HTML / CSS / JS",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jakkah/init_html.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "jss",
+    "site",
+    "web"
+  ],
+  "author": "Yassir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jakkah/init_html/issues"
+  },
+  "homepage": "https://github.com/Jakkah/init_html#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}
