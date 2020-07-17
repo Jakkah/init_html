@@ -29,145 +29,148 @@
         Le contenu sera traité et affiché par le navigateur
     -->
     <body>
-        <header class="row">
-  
-            <h1 class="col-12 col-xl-8">Découvrir le HTML</h1>
+        <div class="container">
+            <header class="row">
+    
+                <h1 class="col-12 col-xl-8">Découvrir le HTML</h1>
 
-            <p class="col-12 col-xl-4">
-                L'histoire du 
-                <!--
-                    abbr avec l'attribut title pour donner la signification
-                    de l'abbréviation définie (ici HTML <=> Hyper Text Markup Language)
-                -->
-                <abbr title="Hyper Text Markup Language" class="dropdown">HTML</abbr>
-                à travers les âges
-            </p>
+                <p class="col-12 col-xl-4">
+                    L'histoire du 
+                    <!--
+                        abbr avec l'attribut title pour donner la signification
+                        de l'abbréviation définie (ici HTML <=> Hyper Text Markup Language)
+                    -->
+                    <abbr title="Hyper Text Markup Language" class="dropdown">HTML</abbr>
+                    à travers les âges
+                </p>
 
-            <!-- Element qui regroupe des balises de navigation -->
-            <nav class="bg-dark col-12 col-xl-12">
+                <!-- Element qui regroupe des balises de navigation -->
+                <nav class="bg-dark col-12 col-xl-12">
 
-                <!-- 
-                    Burger menu button :
-                        Displayed only when device width <= 576px
-                -->
-                <button id="burger-btn">
-                    <span class="icon-menu"></span>
-                </button>
+                    <!-- 
+                        Burger menu button :
+                            Displayed only when device width <= 576px
+                    -->
+                    <button id="burger-btn">
+                        <span class="icon-menu"></span>
+                    </button>
 
-                <!--
-                    Menu do not be displayed if device width <= 576px
-                -->
-                <ul class="flex-container"><!-- Conteneur de liste-->
-                    <!-- Lien interne vers une section-->
-                    <li>    
-                        <a href="index.html" class="btn bg-dark shadowed current" title="HTML la référence">
-                            <span class="icon-home"> Accueil</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="btn bg-dark" href="#" title="HTML la référence">
-                            <span class="icon-html-five"></span>HTML
-                        </a>
-                    </li>
-                    <li>
-                        <a class="btn bg-dark" href="#" title="CSS la référence">
-                            <span class="icon-css3"></span>CSS
-                        </a>
-                    </li>
-                    <!-- Lien externe vers un autre site -->
-
-
-                    <!-- Lien de type téléphone /!\ never this way -->
-                    <li>
-                        <a class="btn bg-dark" href="tel:0522336699" title="Click to call">
-                            Appelez
-                        </a>
-                    </li>
-
-                    <!-- Lien de type mail /!\ never this way -->
-                    <li>
-                        <a
-                            class="btn bg-dark" 
-                            href="#" 
-                            title="Send an email"
-                            onclick="openModal()"
-                        >
-                            Mail
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        
-        <main class="row"><!-- Contenu principal d'une page / unique dans un document -->
-            <section id="section-html" class="col-xl-6 col-12">
-                <header>
-                    <h2>Le langage HTML</h2>
-                    <p>
-                        Le <strong>langage HTML</strong> sert à définir le sens des contenus d'une page.
-                        <em>Il n'est en aucun cas responsable de l'enrichissement</em> de ces contenus.
-                    </p>
-                </header>
-
-                <article>
-                    <header>
-                        <h3>Deux familles de balises HTML</h3>
-                    </header>
-                    <p>
-                        Les <span>balises bloc</span> définissent un rectangle occupant
-                        la totalité de la largeur disponible dans le navigateur.
-                    </p>
-                    
-                    <a class="btn bg-dark" href="./section-html.html" title="HTML">
-                        En savoir plus...
-                    </a>
-
-                    <footer>
-                        <cite title="w3c.org">
-                            <a href="https://www.w3.org" title="W3C" target="_new">
-                                Bloc tags
+                    <!--
+                        Menu do not be displayed if device width <= 576px
+                    -->
+                    <ul class="flex-container"><!-- Conteneur de liste-->
+                        <!-- Lien interne vers une section-->
+                        <li>    
+                            <a href="index.html" class="btn bg-dark shadowed current" title="HTML la référence">
+                                <span class="icon-home"> Accueil</span>
                             </a>
-                        </cite>
-                    </footer>
-                </article>
-            </section>
-
-            <section id="section-css" class="col-xl-6 col-12">
-                <header>
-                    <h2>Le langage CSS</h2>
-                    <p>
-                        Le langage CSS est responsable de la forme des contenus.
-                    </p>
-                </header>
-            </section>
-        </main>
-
-        <div class="bg-dark">
-            <footer>
-                <nav>
-                    <h3>
-                        Nos réseaux sociaux
-                    </h3>
-                    <ul>
-                        <li>
-                            <a href="https://facebook.com" target="_new" title="Follow Us">
-                                <span class="icon-facebook2"></span> Facebook
-                            </a>                                
                         </li>
                         <li>
-                            <a href="https://twitter.com" target="_new" title="Follow Us">
-                                <span class="icon-twitter"></span> Twitter
-                            </a>                                
+                            <a class="btn bg-dark" href="#" title="HTML la référence">
+                                <span class="icon-html-five"></span>HTML
+                            </a>
                         </li>
                         <li>
-                            <a href="https://linked.com" target="_new" title="Follow Us">
-                                <span class="icon-linkedin"></span> Linkedin
-                            </a>                                
+                            <a class="btn bg-dark" href="#" title="CSS la référence">
+                                <span class="icon-css3"></span>CSS
+                            </a>
+                        </li>
+                        <!-- Lien externe vers un autre site -->
+
+
+                        <!-- Lien de type téléphone /!\ never this way -->
+                        <li>
+                            <a class="btn bg-dark" href="tel:0522336699" title="Click to call">
+                                Appelez
+                            </a>
+                        </li>
+
+                        <!-- Lien de type mail /!\ never this way -->
+                        <li>
+                            <a
+                                class="btn bg-dark" 
+                                href="#" 
+                                title="Send an email"
+                                onclick="openModal()"
+                            >
+                                Mail
+                            </a>
                         </li>
                     </ul>
                 </nav>
-            </footer>
+            </header>
+            
+            <main class="row"><!-- Contenu principal d'une page / unique dans un document -->
+                <section id="section-html" class="col-xl-6 col-12">
+                    <header>
+                        <h2>Le langage HTML</h2>
+                        <p>
+                            Le <strong>langage HTML</strong> sert à définir le sens des contenus d'une page.
+                            <em>Il n'est en aucun cas responsable de l'enrichissement</em> de ces contenus.
+                        </p>
+                    </header>
+
+                    <article>
+                        <header>
+                            <h3>Deux familles de balises HTML</h3>
+                        </header>
+                        <p>
+                            Les <span>balises bloc</span> définissent un rectangle occupant
+                            la totalité de la largeur disponible dans le navigateur.
+                        </p>
+                        
+                        <a class="btn bg-dark" href="./section-html.html" title="HTML">
+                            En savoir plus...
+                        </a>
+
+                        <footer>
+                            <cite title="w3c.org">
+                                <a href="https://www.w3.org" title="W3C" target="_new">
+                                    Bloc tags
+                                </a>
+                            </cite>
+                        </footer>
+                    </article>
+                </section>
+
+                <section id="section-css" class="col-xl-6 col-12">
+                    <header>
+                        <h2>Le langage CSS</h2>
+                        <p>
+                            Le langage CSS est responsable de la forme des contenus.
+                        </p>
+                    </header>
+                </section>
+            </main>
+
+            <div class="bg-dark">
+                <footer>
+                    <nav>
+                        <h3>
+                            Nos réseaux sociaux
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="https://facebook.com" target="_new" title="Follow Us">
+                                    <span class="icon-facebook2"></span> Facebook
+                                </a>                                
+                            </li>
+                            <li>
+                                <a href="https://twitter.com" target="_new" title="Follow Us">
+                                    <span class="icon-twitter"></span> Twitter
+                                </a>                                
+                            </li>
+                            <li>
+                                <a href="https://linked.com" target="_new" title="Follow Us">
+                                    <span class="icon-linkedin"></span> Linkedin
+                                </a>                                
+                            </li>
+                        </ul>
+                    </nav>
+                </footer>
+            </div>
         </div>
+        
         <template id="form-template">
             <div class="outer-modal">
                 <div class="inner-modal">
