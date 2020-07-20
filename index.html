@@ -13,15 +13,13 @@
 
         <title>Découvrir le HTML</title>
 
+        <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="./assets/css/styles.css" rel="stylesheet">
-        <link href="./assets/css/layout.css" rel="stylesheet">
-        <link href="./assets/css/forms.css"  rel="stylesheet">
-        <link href="./assets/css/style.css"  rel="stylesheet">
-        <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css"  rel="stylesheet">
-         <!--Import Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
+        
+        <link href="./assets/css/forms.css" rel="stylesheet">
+
+        <!-- Load icomoon styles -->
+        <link href="./assets/css/style.css" rel="stylesheet">
     </head>
 
     <!--
@@ -45,58 +43,67 @@
                 </p>
 
                 <!-- Element qui regroupe des balises de navigation -->
-                <nav class="bg-dark col-12 col-xl-12">
-
+                <nav class="navbar navbar-expand-lg navbar-light bg-light col-12">
                     <!-- 
                         Burger menu button :
                             Displayed only when device width <= 576px
                     -->
-                    <button id="burger-btn">
-                        <span class="icon-menu"></span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Basculer le menu">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <!--
                         Menu do not be displayed if device width <= 576px
                     -->
-                    <ul class="flex-container"><!-- Conteneur de liste-->
-                        <!-- Lien interne vers une section-->
-                        <li>    
-                            <a href="index.html" class="btn bg-dark shadowed current" title="HTML la référence">
-                                <span class="icon-home"> Accueil</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn bg-dark" href="#" title="HTML la référence">
-                                <span class="icon-html-five"></span>HTML
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn bg-dark" href="#" title="CSS la référence">
-                                <span class="icon-css3"></span>CSS
-                            </a>
-                        </li>
-                        <!-- Lien externe vers un autre site -->
+                    <div class="collapse navbar-collapse" id="main-menu">
+                        <ul class="navbar-nav mr-auto"><!-- Conteneur de liste-->
+                            <!-- Lien interne vers une section-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" title="HTML la référence">
+                                    <span class="icon-html-five"></span>HTML
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" title="CSS la référence">
+                                    <span class="icon-css3"></span>CSS
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Test Dropdown
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+
+                            <!-- Lien externe vers un autre site -->
 
 
-                        <!-- Lien de type téléphone /!\ never this way -->
-                        <li>
-                            <a class="btn bg-dark" href="tel:0522336699" title="Click to call">
-                                Appelez
-                            </a>
-                        </li>
+                            <!-- Lien de type téléphone /!\ never this way -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="tel:0522336699" title="Click to call">
+                                    Appelez nous
+                                </a>
+                            </li>
 
-                        <!-- Lien de type mail /!\ never this way -->
-                        <li>
-                            <a
-                                class="btn bg-dark" 
-                                href="#" 
-                                title="Send an email"
-                                onclick="openModal()"
-                            >
-                                Mail
-                            </a>
-                        </li>
-                    </ul>
+                            <!-- Lien de type mail /!\ never this way -->
+                            <li>
+                                <a
+                                    class="nav-link" 
+                                    href="#" 
+                                    title="Send an email"
+                                    onclick="openModal()"
+                                >
+                                    Mail
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </header>
             
@@ -170,8 +177,9 @@
                 </footer>
             </div>
         </div>
-        
+        <!-- Template pour l'affichage du formulaire de contact -->
         <template id="form-template">
+            <!-- form c'est un ensemble de champs (ou contrôles de formulaire) -->
             <div class="outer-modal">
                 <div class="inner-modal">
                     <h2>Contactez le service client</h2>
@@ -179,23 +187,32 @@
                         <div>
                             <input type="text" name="name-ctrl" id="name-ctrl" placeholder="Votre nom...">
                         </div>
-                        <div class="required">
+
+                        <div>
                             <input type="email" name="email-ctrl" id="email-ctrl" placeholder="Votre email..." required>
                         </div>
+
                         <div>
-                            <textarea name="object-ctrl" id="object-ctrl" placeholder="Dites-nous tout !"></textarea>
+                            <label class="required">Objet de votre demande :</label>
+                            <textarea name="object-ctrl" id="object-ctrl"></textarea>
                         </div>
+
                         <div>
-                            <button id="send-btn" onclick="sendAndClose()">Envoyer</button>
-                            <button id="annuler-btn" type="button" onclick="closeModal()">Annuler</button> 
+                            <button id="send-btn" type="submit" onclick="sendAndClose()">Envoyer</button>
+                            <button id="close-btn" type="button" onclick="closeModal()">Annuler</button>
                         </div>
                     </form>
                 </div>
             </div>
         </template>
-        <script src="./assets/js/modal.js"></script>
-        <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+        <!-- Fin du template pour l'affichage du formulaire de contact -->
 
+        <!-- Intégration des scripts JS nécessaires au fonctionnement correct de Bootstrap -->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="./assets/js/modal.js"></script>
     </body>
 
 </html><!-- Fin du document HTML -->

@@ -1,9 +1,18 @@
-:root{
-    --title-color: rgb(200,89,10);
-    --main-color: rgb(0,0,0);
+/**
+* : => désigne un "pseudo élement"
+**/
+:root {
+    --title-color: rgb(200, 89, 10);
+    --main-color: #000;
+    --main-font-size: 2em;
+
+    /**
+    *   Couleurs Bootstrap
+    **/
     --primary: #007bff;
     --secondary: #6c757d;
     --success: #28a745;
+    --dark-success: #0a4a18;
     --danger: #dc3545;
     --warning: #ffc107;
     --info: #17a2b4;
@@ -11,126 +20,210 @@
     --light: #ffffff;
 }
 
+/*
+* Global styles
+*   CSS Rule : selector { property: property_value; }
+*/
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--main-font-size); /* em correspond à l'unité de référence définie dans le navigateur : 16px */
     color: var(--main-color);
 }
-ul{
+
+/**
+* Sur toutes les listes des documents HTML on supprime les puces
+**/
+ul {
     list-style-type: none;
+}
+
+nav {
     color: var(--light);
 }
-header nav ul {
+
+.flex-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
-#burger-btn{
+
+#burger-btn {
     display: none;
-    border-radius: 25%;
-    font-size: 1.2em;
+    width: 5em;
+    height: 5em;
+    padding: 0.4em;
     background-color: var(--secondary);
     color: var(--light);
-    font-weight: lighter;
+    font-weight: bold;
 }
-.seemore{
-    width: 6em;
-    height: 2em;
-}
-@media screen and (max-width:576px) {
-    header nav ul{
+
+/**
+* Première règle de media
+*   Change flex direction for xs device
+**/
+@media screen and (max-width: 576px) {
+    header nav ul.flex-container {
         flex-direction: column;
         display: none;
     }
-    #burger-btn{
+
+    #burger-btn {
         display: block;
     }
 }
 
-nav{
-    color: var(--light);
 
+header nav ul li {
+    margin-right: 0.5em;
 }
-/* nav ul li a:hover{
-    background-color: var(--light);
-    color: var(--dark);
-    transition: 0.6s 0.2s ease-in;
-    transform: rotate(360deg);
-} */
 
-nav ul li a{
+/**
+* On veut définir la couleur #000 et enlever le soulignement
+*   sur tous les liens qui sont dans un LI, lui même dans un UL, lui même dans un NAV
+*   Le caractère "espace" désigne les "enfants de"
+**/
+nav ul li a {
+    transform: rotate(0deg);
     text-decoration: none;
     color: inherit;
+    
 }
-h1,h2{
+
+/**
+* Etat initial d'un élément
+**/
+nav ul li a.btn {
+    transition: color 0.6s 0s ease-in, transform 0.4s 0.4s linear, background-color 0.8s 0.7s ease-out; /** Définit comment passer à l'état final **/
+}
+
+
+nav ul li a.btn:hover { /** Etat final c'est ici **/
+    color: var(--dark);
+    background-color: var(--light);
+    transform: rotate(360deg);
+}
+
+
+abbr {
+    text-decoration: none;
+    font-weight: bold;
+}
+/**
+* Le caractère "," permet de factoriser une règle (associer la règle à plusieurs sélecteurs)
+*   h1 ET h2 seront orange
+**/
+h1,h2,h3,h4,h5,h6 {
     color: var(--title-color);
 }
 
-abbr{
-    font-weight: bold;
-    text-decoration: none;
+/**
+* Sélecteurs "class"
+**/
+.dropdown {
+    color: var(--info);
 }
-.dropdown{
-    color: inherit;
-}
-.btn{
-    display: inline-block;
-    border: solid 1px var(--dark);
+
+.btn {
+    display: inline-block; /** Affiche un élément sous la forme d'un bloc en ligne **/
+    border: solid 1px var(--secondary);
     width: 8em;
-    /* padding-left: 0.5em;
+    /*padding-left: 0.5em; 
     padding-right: 0.5em;
     padding-top: 1em;
-    padding-bottom: 1em; */
+    padding-bottom: 1em;*/
     padding: 1em 0.5em 1em 0.5em;
-    text-decoration: none;
 }
-.bg-light{
-    background: var(--light);
-    color: var(--dark);
-}
-.bg-dark{
-    background: var(--dark);
+
+.bg-light {
+    background-color: var(--secondary)!important; /** Je serai encore plus important que l'autre **/
     color: var(--light);
 }
-.shadowed{
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--light);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.shadowed {
     box-shadow: var(--secondary) 1px 3px;
 }
-section{
-    height: 100vh;
+
+/**
+* Sélecteur sur un ID d'élément : #nom_id
+**/
+section {
+    height: auto;
+    min-height: 100vh;
 }
-#section-html{
+
+@media screen and (min-width: 75em) {
+    section {
+        height: 100vh;
+    }
+}
+
+
+section#section-html {
     background-color: var(--info);
 }
 
-#section-css{
+section#section-css {
     background-color: var(--warning);
 }
 
-.current{
-    background-color: var(--warning);
+/**
+* Specific design for specific pages
+**/
+#page-html section#section-html {
+    background-color: rgb(255, 255, 255);
 }
 
-.btn:hover{
-    background-color: var(--light);
-    color: var(--dark);
-    transition: 0.6s 0.2s ease-in;
-    transform: rotate(360deg);
+#page-html section#section-html h2 {
+    color: var(--info);
 }
-.reseau{
+
+/**
+* Specific design for footer that have a bg-dark class
+**/
+.bg-dark footer, .bg-light footer {
+    color: inherit;
+    background-color: inherit;
+}
+
+.bg-dark footer ul, .bg-light footer ul {
+    margin: 0;
+    padding: 0;
+}
+.bg-dark footer h3, .bg-light footer h3 {
+    color: inherit;
+}
+
+.bg-dark footer a, .bg-light footer a {
+    color: inherit;
     text-decoration: none;
 }
-footer{
-    height: 20vh;
-    display: flex;
-}
-#section-html footer{
-    display: block;
+
+/**
+* Let me put some spaces between icons and text
+*   Attribute selector
+**/
+span[class^="icon-"] {
+    margin-right: 0.3em;
 }
 
-/* Modal css */
+main article p span {
+    color: var(--warning);
+}
 
-.outer-modal{
-    position: fixed;
+/**
+* Modal design
+**/
+.outer-modal {
+    position: fixed; /** C'est moi qui décide de l'endroit où placer l'élément **/
     top: 0;
     left: 0;
     height: 100%;
@@ -138,11 +231,11 @@ footer{
     background-color: rgba(128, 128, 128, 0.6);
 }
 
-.inner-modal{
+.inner-modal {
     position: relative;
     background-color: var(--light);
-    width: 450px;
-    height: 250px;
+    width: 600px;
+    height: 450px;
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
