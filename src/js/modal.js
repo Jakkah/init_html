@@ -1,4 +1,9 @@
-function openModal(){
+
+
+ export default class Modal{
+     
+
+    openModal(){
     console.log('je dois ouvrir le modal')
 
     const formTemplate = document.getElementById('form-template')
@@ -8,9 +13,10 @@ function openModal(){
 }
 
 
-function closeModal(){
+    closeModal(){
     console.log('Ferme cette putain de PopUp !')
     const modal = document.getElementsByClassName('outer-modal')[0]
     document.body.removeChild(modal)
     
+}
 }
